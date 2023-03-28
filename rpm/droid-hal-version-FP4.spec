@@ -11,26 +11,10 @@
 %define have_vibrator_native 1
 %define have_led 1
 # Device-specific ofono configuration
-Provides: ofono-configs
-Obsoletes: ofono-configs-mer
+
 Obsoletes: ofono-configs-binder
 Obsoletes: bluez5-configs-mer
 
-# No device reset
-Provides: jolla-settings-system-reset
-
-# Device-specific usb-moded configuration
-Provides: usb-moded-configs
-Obsoletes: usb-moded-defaults
-
-Obsoletes: audioflingerglue
-
-
-
-Requires: libgbinder-tools
-
-%define ofono_enable_plugins bluez5,hfp_ag_bluez5
-%define ofono_disable_plugins bluez4,dun_gw_bluez4,hfp_ag_bluez4,hfp_bluez4,dun_gw_bluez5,hfp_bluez5
 
 %include droid-hal-version/droid-hal-version.inc
 
